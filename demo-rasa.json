@@ -1,0 +1,1798 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+          "value": "information",
+          "synonyms": ["Info", "info", "Information"]
+      },
+      {
+          "value": "TSLA",
+          "synonyms": ["Tesla","tesla","tsla"]
+      },
+      {
+          "value": "AAPL",
+          "synonyms": ["Apple","apple","aapl"]
+      },
+      {
+          "value": "AMZN",
+          "synonyms": ["Amazon","amazon","amzn"]
+      },
+      {
+          "value": "GOOG",
+          "synonyms": ["Google","google","goog"]
+      },
+      {
+          "value": "MSFT",
+          "synonyms": ["Microsoft","microsoft","msft"]
+      },
+      {
+        "value": "chinese",
+        "synonyms": ["Chinese", "Chines", "chines"]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": ["veggie", "vegg"]
+      },
+      {
+        "value": "hi",
+        "synonyms": ["expensive", "valued"]
+      },
+      {
+        "value": "lo",
+        "synonyms": ["cheap"]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I'd like to see some stock information",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "I want to check the price of the stock",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "Show me the closing price of aapl",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "Show me the apple stock tsla today",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "I want to search for stock information",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "I'd like to check today's apple stock",
+        "intent": "stock_search",
+        "entities": []
+      },
+      {
+        "text": "Show me the highest price for aapl in the past year",
+        "intent": "highest",
+        "entities": []
+      },
+      {
+        "text": "show me the highest price",
+        "intent": "highest",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a stock in the north of town",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Show me the apple stock aapl in the south  today",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 36,
+            "end": 41,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Show me the apple stock aapl in the south  today",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me today's stock amswa in the west of the town",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 35,
+            "end": 39,
+            "value": "west",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Show me today's stock amswa in the west of the town",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 22,
+            "end": 27,
+            "value": "amswa",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for aapl today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for amswa today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for aapl today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "Show me tsla's lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "Show me aapl's lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "Show me some expensive stocks",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 22,
+            "value": "expensive",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Show me some valued stocks",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "valued",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Show me some cheap stocks",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 13,
+            "end": 18,
+            "value": "cheap",
+            "entity": "price"
+          }
+        ]
+      },
+      {
+        "text": "Show me the lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "i want to know the highest price today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "And for the highest price today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "And for the lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for kirk in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "kirk",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for aapl in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the highest price for axti in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 34,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of aapl",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "value": "the closing price",
+            "entity": "previousClose"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of bidu",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "bidu",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of amswa",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "value": "the closing price",
+            "entity": "previousClose"
+          }
+        ]
+      },
+      {
+        "text": "Show me some information about amswa",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "amswa",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me some information about aapl",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 35,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me some information about tsla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 35,
+            "value": "tsla",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me some information about banc",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 35,
+            "value": "banc",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "how about banc",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "banc",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "show me the banc",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "banc",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "how about aapl",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "show me the aapl",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "aapl",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "how about tsla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "tsla",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "show me the tsla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "tsla",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "how about amzn",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "amzn",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "show me the amzn",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "amzn",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of amzn",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "amzn",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of tsla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 25,
+            "value": "the closing price",
+            "entity": "previousClose"
+          }
+        ]
+      },
+      {
+        "text": "how about its lowest price today",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "lowest price",
+            "entity": "low"
+          }
+        ]
+      },
+      {
+        "text": "how about its lowest price",
+        "intent": "lowest",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "lowest",
+            "entity": "lo"
+          }
+        ]
+      },
+      {
+        "text": "how about its highest price",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 14,
+            "end": 27,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "how about its highest price today",
+        "intent": "highest",
+        "entities": [
+          {
+            "start": 14,
+            "end": 27,
+            "value": "highest",
+            "entity": "hi"
+          }
+        ]
+      },
+      {
+        "text": "Show me the closing price of tsla",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 33,
+            "value": "tsla",
+            "entity": "symbol"
+          }
+        ]
+      },
+      {
+        "text": "aapl's highest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 7,
+            "end":37,
+            "value": "highest price in the past year",
+            "entity": "week52High"
+          }
+        ]
+      },
+      {
+        "text": "Tsla's highest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 7,
+            "end":37,
+            "value": "highest price in the past year",
+            "entity": "week52High"
+          }
+        ]
+      },
+      {
+        "text": "The tsla's highest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 11,
+            "end":41,
+            "value": "highest price in the past year",
+            "entity": "week52High"
+          }
+        ]
+      },
+      {
+        "text": "Tsla's lowest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 7,
+            "end":36,
+            "value": "lowest price in the past year",
+            "entity": "week52Low"
+          }
+        ]
+      },
+      {
+        "text": "Aapl's lowest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 7,
+            "end":36,
+            "value": "lowest price in the past year",
+            "entity": "week52Low"
+          }
+        ]
+      },
+      {
+        "text": "Amswa's lowest price in the past year",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 8,
+            "end":37,
+            "value": "lowest price in the past year",
+            "entity": "week52Low"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for an indian spot called olaolaolaolaolaola",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ]
+      },     {
+        "text": "search for restaurants",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in the west",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "west",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "a cheap hotel in the north",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 21,
+            "end": 26,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "some cheap stocks in the north",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 25,
+            "end": 30,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "a cheap stock in the north",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "cheap",
+            "entity": "price"
+          },
+          {
+            "start": 21,
+            "end": 26,
+            "value": "north",
+            "entity": "area"
+          }
+        ]
+      },
+      {
+        "text": "an expensive hotel in the south",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "an expensive stock in the south",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 26,
+            "end": 31,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "some expensive stocks in the south",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "expensive",
+            "entity": "price"
+          },
+          {
+            "start": 29,
+            "end": 34,
+            "value": "south",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "a hotel in the downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "downtown",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "a stock in the downtown",
+        "intent": "stock_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "downtown",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the north of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "in the north of town",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "north",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "I want a mid range hotel",
+        "intent": "",
+        "entities": []
+      },
+      {
+          "text": "what can you do for me",
+          "intent": "function_intro",
+          "entities": []
+        },
+        {
+          "text": "what could you do",
+          "intent": "function_intro",
+          "entities": []
+        },
+        {
+          "text": "ok, what can you do",
+          "intent": "function_intro",
+          "entities": []
+        },
+        {
+          "text": "what information can you provide",
+          "intent": "function_intro",
+          "entities": []
+        },
+        {
+          "text": "what's you function",
+          "intent": "function_intro",
+          "entities": []
+        },
+        {
+          "text": "I want to get current price of tesla",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":31,
+              "end":36,
+              "value":"TSLA",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "I want to know the price of amazon",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":28,
+              "end":33,
+              "value":"AMZN",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "tell me the price of amazon",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":21,
+              "end":27,
+              "value":"AMZN",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "What's the weather like in the latest forecast",
+          "intent": "query_weather",
+          "entities": [
+            {
+              "start":11,
+              "end":18,
+              "value":"weather",
+              "entity":"qw"
+            }
+          ]
+        },
+        {
+          "text": "how about the weather",
+          "intent": "query_weather",
+          "entities": [
+            {
+              "start":14,
+              "end":21,
+              "value":"weather",
+              "entity":"qw"
+            }
+          ]
+        },
+        {
+          "text": "My location is tiyu road, xiaodian district, taiyuan city, Shanxi Province",
+          "intent": "specify_location",
+          "entities": [
+            {
+              "start":3,
+              "end":11,
+              "value":"location",
+              "entity":"sl"
+            }
+          ]
+        },
+        {
+          "text": "My location is that 112.87718 degrees east longitude and 37.967819 degrees north latitude",
+          "intent": "specify_location",
+          "entities": [
+            {
+              "start":3,
+              "end":11,
+              "value":"location",
+              "entity":"sl"
+            }
+          ]
+        },
+        {
+          "text": "tell me the current price of teslaa",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":29,
+              "end":35,
+              "value":"TSLA",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "I want to know the basic forecast",
+          "intent": "summary",
+          "entities": [
+            {
+              "start":25,
+              "end":33,
+              "value":"forecast",
+              "entity":"sf"
+            }
+          ]
+        },
+        {
+          "text": "I want to know the icon",
+          "intent": "icon",
+          "entities": [
+            {
+              "start":19,
+              "end":23,
+              "value":"icon",
+              "entity":"ic"
+            }
+          ]
+        },
+        {
+          "text": "how about the basic forecast",
+          "intent": "summary",
+          "entities": [
+            {
+              "start":20,
+              "end":28,
+              "value":"forecast",
+              "entity":"sf"
+            }
+          ]
+        },
+        {
+          "text": "how about the icon",
+          "intent": "icon",
+          "entities": [
+            {
+              "start":20,
+              "end":24,
+              "value":"icon",
+              "entity":"ic"
+            }
+          ]
+        },
+        {
+          "text": "tell me the basic forecast",
+          "intent": "summary",
+          "entities": [
+            {
+              "start":18,
+              "end":26,
+              "value":"forecast",
+              "entity":"sf"
+            }
+          ]
+        },
+        {
+          "text": "tell me the icon",
+          "intent": "icon",
+          "entities": [
+            {
+              "start":18,
+              "end":22,
+              "value":"icon",
+              "entity":"ic"
+            }
+          ]
+        },
+        {
+          "text": "what about the price of microsoft",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":11,
+              "end":20,
+              "value":"MSFT",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "what is the price of apple",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":11,
+              "end":17,
+              "value":"AAPL",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "I want to know the temperature for the next two days from now",
+          "intent": "48_temperature",
+          "entities": [
+            {
+              "start":31,
+              "end":61,
+              "value":"temperature",
+              "entity":"4t"
+            }
+          ]
+        },
+        {
+          "text": "how about the temperature for the next two days from now",
+          "intent": "48_temperature",
+          "entities": [
+            {
+              "start":26,
+              "end":56,
+              "value":"temperature",
+              "entity":"4t"
+            }
+          ]
+        },
+        {
+          "text": "tell me the temperature for the next two days from now",
+          "intent": "48_temperature",
+          "entities": [
+            {
+              "start":24,
+              "end":54,
+              "value":"temperature",
+              "entity":"4t"
+            }
+          ]
+        },
+        {
+          "text": "can you give me a more intuitive presentation",
+          "intent": "weather_plot",
+          "entities": [
+            {
+              "start":23,
+              "end":32,
+              "value":"intuitive",
+              "entity":"wp"
+            }
+          ]
+        },
+        {
+          "text": "can you show me a more intuitive presentation",
+          "intent": "weather_plot",
+          "entities": [
+            {
+              "start":23,
+              "end":32,
+              "value":"intuitive",
+              "entity":"wp"
+            }
+          ]
+        },
+        {
+          "text": "can you tell me a more intuitive presentation",
+          "intent": "weather_plot",
+          "entities": [
+            {
+              "start":23,
+              "end":32,
+              "value":"intuitive",
+              "entity":"wp"
+            }
+          ]
+        },
+        {
+          "text": "tell me the price of TSLA and AAPL now",
+          "intent": "current_price",
+          "entities": [
+            {
+              "start":21,
+              "end":25,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+              "start":30,
+              "end":34,
+              "value":"AAPL",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of TSLA from 2017-5-8 to 2017-6-8",
+          "intent": "clear_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":49,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+                "start":55,
+                "end":63,
+                "value":"2017-5-8",
+                "entity":"start_date"
+            },
+            {
+                "start":67,
+                "end":75,
+                "value":"2017-6-8",
+                "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of tesla from 2018-10-22 to 2018-11-22",
+          "intent": "clear_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":49,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+                "start":55,
+                "end":65,
+                "value":"2018-10-22",
+                "entity":"start_date"
+            },
+            {
+                "start":69,
+                "end":79,
+                "value":"2018-11-22",
+                "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of tesla from Oct 12 2017 to Jan 22 2018",
+          "intent": "clear_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":49,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+                "start":55,
+                "end":66,
+                "value":"2017-10-12",
+                "entity":"start_date"
+            },
+            {
+                "start":70,
+                "end":81,
+                "value":"2018-1-22",
+                "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of tesla from Oct 15 2017 to Oct 25 2018",
+          "intent": "clear_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":49,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+                "start":55,
+                "end":66,
+                "value":"2017-10-15",
+                "entity":"start_date"
+            },
+            {
+                "start":70,
+                "end":81,
+                "value":"2018-10-25",
+                "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of apple from 2018-10-22 to 2018-11-22",
+          "intent": "clear_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":49,
+              "value":"AAPL",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+                "start":55,
+                "end":65,
+                "value":"2018-10-22",
+                "entity":"start_date"
+            },
+            {
+                "start":69,
+                "end":79,
+                "value":"2018-11-22",
+                "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "give me the historical data of TSLA",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":31,
+              "end":35,
+              "value":"TSLA",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "i would like to get the historical close price of TSLA",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":50,
+              "end":54,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":35,
+                "end":46,
+                "value":"close",
+                "entity":"his_price_type"
+            }
+          ]
+        },
+        {
+          "text": "i want to get the historical close price of TSLA",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":44,
+              "end":48,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":29,
+                "end":40,
+                "value":"close",
+                "entity":"his_price_type"
+            }
+          ]
+        },
+        {
+          "text": "i want to know the highest price of TSLA in the past few days",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":36,
+              "end":40,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":19,
+                "end":26,
+                "value":"high",
+                "entity":"his_price_type"
+            }
+          ]
+        },
+        {
+          "text": "show me the data of microsoft in the past few days",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":20,
+              "end":29,
+              "value":"MSFT",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "show me the historical open data of AAPL",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+              "start":36,
+              "end":40,
+              "value":"TSLA",
+              "entity":"company"
+            },
+            {
+                "start":23,
+                "end":27,
+                "value":"open",
+                "entity":"his_price_type"
+            }
+          ]
+        },
+        {
+          "text": "give me the close data of microsoft",
+          "intent": "vague_historical_data",
+          "entities": [
+            {
+                "start":12,
+                "end":17,
+                "value":"close",
+                "entity":"his_price_type"
+            },
+            {
+              "start":26,
+              "end":35,
+              "value":"MSFT",
+              "entity":"company"
+            }
+          ]
+        },
+        {
+          "text": "open data from 2017-12-1 to 2018-1-15",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+                "start":1,
+                "end":4,
+                "value":"open",
+                "entity":"his_price_type"
+            },
+            {
+              "start":15,
+              "end":24,
+              "value":"2017-12-1",
+              "entity":"start_date"
+            },
+            {
+              "start":28,
+              "end":37,
+              "value":"2018-1-15",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "from 2019-1-2 to 2019-2-3",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+              "start":5,
+              "end":13,
+              "value":"2019-1-2",
+              "entity":"start_date"
+            },
+            {
+              "start":17,
+              "end":25,
+              "value":"2019-2-3",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "from 2017-12-1 to 2018-1-15",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+              "start":5,
+              "end":14,
+              "value":"2017-12-1",
+              "entity":"start_date"
+            },
+            {
+              "start":18,
+              "end":27,
+              "value":"2018-1-15",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "from 2018-10-6 to 2018-12-25",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+              "start":5,
+              "end":14,
+              "value":"2018-10-6",
+              "entity":"start_date"
+            },
+            {
+              "start":18,
+              "end":28,
+              "value":"2018-12-25",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "from Apr 12 2018 to Jan 10 2019",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+              "start":5,
+              "end":16,
+              "value":"2018-4-12",
+              "entity":"start_date"
+            },
+            {
+              "start":20,
+              "end":31,
+              "value":"2019-1-10",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+          "text": "from May 1 2018 to Dec 31 2018",
+          "intent": "add_historical_data",
+          "entities": [
+            {
+              "start":5,
+              "end":15,
+              "value":"2018-5-1",
+              "entity":"start_date"
+            },
+            {
+              "start":19,
+              "end":30,
+              "value":"2018-12-31",
+              "entity":"end_date"
+            }
+          ]
+        },
+        {
+            "text":"please analyze the stock of tesla",
+            "intent":"analyze",
+            "entities":[
+              {
+                "start":34,
+                "end":39,
+                "value":"TSLA",
+                "entity":"company"
+              }
+            ]
+        },
+        {
+            "text":"analyze the stock of apple",
+            "intent":"analyze",
+            "entities":[
+              {
+                "start":34,
+                "end":39,
+                "value":"AAPL",
+                "entity":"company"
+              }
+            ]
+        },
+        {
+            "text":"please analyze the stock of amazon",
+            "intent":"analyze",
+            "entities":[
+              {
+                "start":33,
+                "end":39,
+                "value":"AMZN",
+                "entity":"company"
+              }
+            ]
+        },
+        {
+          "text": "hey",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "howdy",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "hey there",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "hello",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "hi",
+          "intent": "greet",
+          "entities": []
+        },
+        {
+          "text": "bye",
+          "intent": "finish",
+          "entities": []
+        },
+        {
+          "text": "goodbye",
+          "intent": "finish",
+          "entities": []
+        },
+        {
+          "text": "good bye",
+          "intent": "finish",
+          "entities": []
+        },
+        {
+          "text": "seeyou",
+          "intent": "finish",
+          "entities": []
+        },
+        {
+          "text": "thanks",
+          "intent": "finish",
+          "entities": []
+        },
+        {
+          "text": "thankyou",
+          "intent": "finish",
+          "entities": []
+        }
+    ]
+  }
+}
