@@ -13,6 +13,7 @@ This is a python-based chatbot that can be integrated with WeChat. It can be use
    * .mp4 -> Display project results in video format
    
 ## Samples show
+Go to [here](https://www.bilibili.com/video/av63839931/)
 ## Conversation started
 1\.The user opens the weixin.py file, registers the robot, and finds information about the friends to talk to.
 ```
